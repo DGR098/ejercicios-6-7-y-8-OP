@@ -1,0 +1,51 @@
+package ejericicos;
+
+public class texto {
+
+    // Patrones de diseño
+
+    // Singelton:
+    // Garantiza que una clase tenga solo una instancia y
+    // proporciona un punto de acceso global a ella.. Esto significa que, sin importar cuántas veces
+    // se solicite la creación de objetos de esa clase, siempre se devolverá la misma instancia.
+    // Es útil en situaciones donde es necesario tener exactamente
+    // una instancia de una clase para compartir datos o recursos en toda la aplicación.
+    // Por ejemplo: Si se necesita una única conexión a una base de datos en toda la aplicación,
+    // se puede usar un Singleton para garantizar que solo exista una instancia de la conexión y
+    // evitar conexiones redundantes y costosas.
+
+    // Factory:
+    // Define una interfaz para crear objetos, pero permite que las subclases decidan qué clase instanciar.
+    // Es decir, delega la creación de objetos a las clases secundarias
+    // en lugar de hacerlo directamente en la clase cliente.
+    // Su funcion principal es abstraer la lógica de creación de objetos, lo que facilita la adición de nuevas clases
+    // concretas sin modificar el código existente.
+    // Por ejemplo: en el desarrollo de un juego, donde diferentes personajes pueden tener diferentes comportamientos
+    // y atributos. El Factory puede manejar la creación de objetos para diferentes tipos de personajes
+    // (por ejemplo, guerreros, magos, arqueros), y el código cliente solo necesita interactuar
+    // con la interfaz común de los personajes.
+
+
+    // Builder:
+    // Separa la construcción de un objeto complejo de su representación, permitiendo la creación paso a paso.
+    // Su funcion principal es separar la construcción de un objeto complejo de su representación,
+    // lo que permite crear diferentes representaciones del mismo objeto.
+    // Es útil cuando se tienen objetos que pueden tener muchas configuraciones posibles y opciones,
+    // y la creación directa de objetos con muchos parámetros puede ser confusa o propensa a errores.
+    // Por ejemplo:  Supongamos que se tiene un objeto complejo con muchas opciones de configuración,
+    // en lugar de pasar todas las opciones como parámetros al constructor,
+    // se puede utilizar un Builder para crear el objeto configurándolo paso a paso con las diferentes opciones.
+
+
+    // Prototype:
+    // Se utiliza para crear objetos duplicados o clones de un objeto existente,
+    // sin depender de su clase concreta. En lugar de crear nuevos objetos mediante la invocación de constructores,
+    // el patrón Prototype clona un objeto existente y lo modifica según sea necesario.
+    // Su funcion principal es evitar la duplicación de código y mejorar el rendimiento,
+    // especialmente cuando la creación de un objeto es costosa en términos de recursos y tiempo.
+    // Por ejemplo: En un editor gráfico o herramienta de diseño, donde se pueden clonar objetos gráficos existentes
+    // para crear copias con propiedades similares, y luego se personalizan según las necesidades del usuario.
+    //
+
+
+}
