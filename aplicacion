@@ -1,0 +1,32 @@
+package ejericicos;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class Logger {
+    private static Logger instance;
+    private String logFile;
+
+    private Logger() {
+        // Constructor privado para evitar la creación directa de instancias
+        logFile = "log.txt";
+    }
+
+    public static Logger getInstance() {
+        if (instance == null) {
+            instance = new Logger();
+        }
+        return instance;
+    }
+
+    public void logMessage(String message) {
+        try {
+            PrintWriter writer = new PrintWriter(new FileWriter(logFile, true));
+            writer.println(message);
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
