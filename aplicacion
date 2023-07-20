@@ -30,3 +30,26 @@ public class Logger {
         }
     }
 }
+
+
+package ejericicos;
+
+public class LoggerDemo {
+        public static void main(String[] args) {
+            Logger logger1 = Logger.getInstance();
+            Logger logger2 = Logger.getInstance();
+
+            // Comprobamos que logger1 y logger2 son la misma instancia
+            if (logger1 == logger2) {
+                System.out.println("logger1 y logger2 son la misma instancia (Singleton funciona).");
+            } else {
+                System.out.println("Singleton no se implementó correctamente. Se crearon instancias diferentes.");
+            }
+
+            // Vamos a usar el logger para registrar algunos mensajes
+            logger1.logMessage("Mensaje 1");
+            logger2.logMessage("Mensaje 2");
+        }
+    }
+
+
